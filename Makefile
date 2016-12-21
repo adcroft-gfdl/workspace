@@ -304,7 +304,7 @@ clone_minimal: $(MOM6)
 clone_http:
 	make GITHUB="https://github.com/" clone
 clone_http_minimal:
-	make GITHUB="https://github.com/" clone_minimal
+	mke GITHUB="https://github.com/" clone_minimal
 status_extras: $(ICE_PARAM) $(ATMOS_PARAM) $(SIS1) $(AM2_REPOS) $(LM3_REPOS)
 	echo $^ | tr ' ' '\n' | xargs -I dir sh -c 'cd dir; git fetch'
 	echo $^ | tr ' ' '\n' | xargs -I dir sh -c 'cd dir; echo Status in dir; git status'
